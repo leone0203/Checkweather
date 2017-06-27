@@ -28,6 +28,12 @@ import java.util.Calendar;
 //open weather map api
 //api key:    872e464cc604b22d3461e6d1a52b5f54
 
+/**
+ * Pobranie danych pogodowych
+ * Dostosowanie danych
+ * Wyswietlenie danych
+ */
+
 public class WeatherActivity extends AppCompatActivity {
 
     String placeName; //place name from list activity

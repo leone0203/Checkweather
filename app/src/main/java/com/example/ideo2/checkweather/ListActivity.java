@@ -18,7 +18,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * Activity zawierające listę lokalizacji
+ */
 public class ListActivity extends AppCompatActivity {
 
     static ArrayList<String> places = new ArrayList<>();

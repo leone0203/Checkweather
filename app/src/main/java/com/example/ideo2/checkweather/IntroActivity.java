@@ -15,7 +15,9 @@ import android.view.View;
 import android.widget.Toast;
 
 /**
- * Powitalne avtivity
+ * Powitalne activity
+ * Pobiera lokalizacje
+ * Wybranie opcji wyswietlenia pogody
  */
 public class IntroActivity extends AppCompatActivity {
 

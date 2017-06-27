@@ -10,16 +10,16 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 
 import java.util.ArrayList;
-
+/**
+ * Obsluga wszystkich fragmentow do viewpager
+ */
 public class WeatherPagerActivity extends FragmentActivity {
 
     private static final int NUM_PAGES = 7;
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 
-    /**
-     * Obsluga wszystkich fragmentow do viewpager
-     */
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
