@@ -24,7 +24,10 @@ public class ListActivity extends AppCompatActivity {
     static ArrayList<String> places = new ArrayList<>();
     static ArrayAdapter arrayAdapter;
     Set<String> placesSet;
-
+    /**
+     * Utworzenie listwiew, arraydaptera oraz sharedprefereces
+     * konfiguracja dzialania listy
+     */
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

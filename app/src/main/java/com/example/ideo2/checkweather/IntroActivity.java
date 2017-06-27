@@ -14,7 +14,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-
+/**
+ * Powitalne avtivity
+ */
 public class IntroActivity extends AppCompatActivity {
 
     LocationManager locationManager;
@@ -24,14 +26,16 @@ public class IntroActivity extends AppCompatActivity {
 
 
 
-
-
-
+    /**
+     * Przeniesienie do list activity
+     */
     public void goToMyLocations(View view) {
         Intent i = new Intent(getApplicationContext(), ListActivity.class);
         startActivity(i);
     }
-
+    /**
+     * Przeniesienie do weather activity wraz z danymi obecnej lokalizacji
+     */
     public void goByCurrentLocation(View view) {
         getMyLocation();
 
@@ -49,7 +53,9 @@ public class IntroActivity extends AppCompatActivity {
         }
 
     }
-
+    /**
+     * Pobranie lokalizacji
+     */
     public void getMyLocation() {
         locationManager = (LocationManager) this.getSystemService(LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -73,7 +79,9 @@ public class IntroActivity extends AppCompatActivity {
         }
     }
 
-
+    /**
+     * Metoda oncreate, w ktorej pobieramy lokalizacje oraz niezbedne pozwolenia od uzytkownika
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,7 +93,9 @@ public class IntroActivity extends AppCompatActivity {
     }
 
     private static final int LOCATION_PERMISSION_REQUEST = 1;
-
+    /**
+     * uzyskanie pozwolenia na lokalizacje
+     */
     public void getPermissionToLocation() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 !=PackageManager.PERMISSION_GRANTED) {
@@ -100,7 +110,9 @@ public class IntroActivity extends AppCompatActivity {
             }
         }
     }
-
+    /**
+     * radanie pozwolenia na ustalenie lokalizacji
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         boolean showRationale = true;

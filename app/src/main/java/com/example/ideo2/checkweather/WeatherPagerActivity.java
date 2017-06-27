@@ -17,7 +17,9 @@ public class WeatherPagerActivity extends FragmentActivity {
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 
-
+    /**
+     * Obsluga wszystkich fragmentow do viewpager
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

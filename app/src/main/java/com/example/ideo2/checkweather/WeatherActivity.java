@@ -117,7 +117,11 @@ public class WeatherActivity extends AppCompatActivity {
     ImageView weatherImage6;
     ImageView weatherImage7;
 
-
+    /**
+     * Uruchomienie downloadtask z parametrem w zaleznosci z ktorego activity pochodza dane
+     * inicjalizacja zmiennych
+     * uzycie kalendaza do przypisania dni tygodnia
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -332,7 +336,9 @@ public class WeatherActivity extends AppCompatActivity {
     }
 
 
-
+    /**
+     * Pobieranie danych z api jako JSON
+     */
     //download json from api class
     public class DownloadTask extends AsyncTask<String, Void, String> {
 
@@ -380,7 +386,11 @@ public class WeatherActivity extends AppCompatActivity {
             }
             return null;
         }
-
+        /**
+         * onPostExecute
+         * dzielenie danych z api na mniejsze obiekty
+         * oraz przypisanie ich do zmiennych
+         */
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
@@ -455,8 +465,7 @@ public class WeatherActivity extends AppCompatActivity {
                     for (Double i : humidity) Log.i("LOG-MES: Day hum: ", i.toString());
                     */
 
-
-                //--------setting values to layout
+         //--------setting values to layout
                 cityNameId.setText(cityName);   //setting city name to layout
                 countryCodeId.setText(countryCode); //setting country code to layout
 
@@ -548,15 +557,20 @@ public class WeatherActivity extends AppCompatActivity {
         }
 
     }
-
+    /**
+     * Metoda przenosząca do viewpager 1
+     */
     public void goToPager1(View view){
+
         if (mainArray!=null) {
             Intent i = new Intent(getApplicationContext(), WeatherPagerActivity.class);
             i.putExtra("fragment", "fragment1");
             startActivity(i);
         }
     }
-
+    /**
+     * Metoda przenosząca do viewpager 2
+     */
     public void goToPager2(View view){
         if (mainArray!=null) {
             Intent i = new Intent(getApplicationContext(), WeatherPagerActivity.class);
@@ -564,6 +578,9 @@ public class WeatherActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+    /**
+     * Metoda przenosząca do viewpager 3
+     */
     public void goToPager3(View view){
         if (mainArray!=null) {
             Intent i = new Intent(getApplicationContext(), WeatherPagerActivity.class);
@@ -571,6 +588,9 @@ public class WeatherActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+    /**
+     * Metoda przenosząca do viewpager 4
+     */
     public void goToPager4(View view){
         if (mainArray!=null) {
             Intent i = new Intent(getApplicationContext(), WeatherPagerActivity.class);
@@ -578,6 +598,9 @@ public class WeatherActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+    /**
+     * Metoda przenosząca do viewpager 5
+     */
     public void goToPager5(View view){
         if (mainArray!=null) {
             Intent i = new Intent(getApplicationContext(), WeatherPagerActivity.class);
@@ -585,6 +608,9 @@ public class WeatherActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+    /**
+     * Metoda przenosząca do viewpager 6
+     */
     public void goToPager6(View view){
         if (mainArray!=null) {
             Intent i = new Intent(getApplicationContext(), WeatherPagerActivity.class);
@@ -592,6 +618,9 @@ public class WeatherActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+    /**
+     * Metoda przenosząca do viewpager 7
+     */
     public void goToPager7(View view){
         if (mainArray!=null) {
             Intent i = new Intent(getApplicationContext(), WeatherPagerActivity.class);
